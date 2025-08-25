@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const ZOOM_LINK = 'https://us06web.zoom.us/j/82637560760';
-    const TARGET_HOUR = 20; // 20:00 (8 PM)
+    const TARGET_HOUR = 19; // 19:00 (7 PM)
     const TARGET_MINUTE = 0;
     
     const ctaButton = document.querySelector('.cta-button');
@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const today = new Date();
         
-        // Set target time for today at 20:00
+        // Set target time for today at 19:00
         today.setHours(TARGET_HOUR, TARGET_MINUTE, 0, 0);
         
-        // If it's past 20:00 today, set target for tomorrow
+        // If it's past 19:00 today, set target for tomorrow
         if (now > today) {
             today.setDate(today.getDate() + 1);
         }
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
         
-        // Check if it's time to enable the button (between 20:00 and 20:59)
+        // Check if it's time to enable the button (between 19:00 and 19:59)
         const currentHour = now.getHours();
         const currentMinute = now.getMinutes();
         
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         
         // Update title with countdown
-        ctaTitle.innerHTML = `LIVE HOJE ÀS 20:00 • FALTAM ${hours}H ${minutes}MIN`;
+        ctaTitle.innerHTML = `LIVE HOJE ÀS 19:00 • FALTAM ${hours}H ${minutes}MIN`;
         
         // Keep button disabled with red style
         ctaButton.disabled = true;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctaButton.classList.remove('cta-button--live');
         
         // Update subtitle
-        ctaSubtitle.textContent = 'Link será liberado automaticamente às 20:00';
+        ctaSubtitle.textContent = 'Link será liberado automaticamente às 19:00';
     }
     
     function enableLiveButton() {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = new Date();
         const currentHour = now.getHours();
         
-        // If it's between 20:00 and 20:59, start in live mode
+        // If it's between 19:00 and 19:59, start in live mode
         if (currentHour === TARGET_HOUR) {
             enableLiveButton();
         } else {

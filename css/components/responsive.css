@@ -1,0 +1,207 @@
+@media (max-width: 1200px) {
+    :root {
+        --container-padding: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --font-size-4xl: 4.8rem;
+        --font-size-3xl: 3.6rem;
+        --font-size-2xl: 2.8rem;
+    }
+    
+    .schedule__grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--space-lg);
+    }
+}
+
+@media (max-width: 768px) {
+    .warning-box__grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-box {
+        padding: var(--space-xl);
+    }
+    
+    .cta-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .instructions {
+        padding: var(--space-lg);
+    }
+    
+    :root {
+        --font-size-4xl: 3.6rem;
+        --font-size-3xl: 2.8rem;
+        --font-size-2xl: 2.4rem;
+        --font-size-xl: 2rem;
+        --space-3xl: 4.8rem;
+        --space-4xl: 6.4rem;
+    }
+    
+    .header {
+        padding: var(--space-2xl) 0;
+    }
+    
+    .header__logo {
+        margin-bottom: var(--space-lg);
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+    
+    .terminal-text {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .glitch {
+        font-size: clamp(var(--font-size-xl), 8vw, var(--font-size-3xl));
+    }
+    
+    .disclaimer {
+        padding: var(--space-xl);
+        margin: var(--space-2xl) 0;
+    }
+    
+    .schedule__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+    
+    .card__content {
+        padding: var(--space-lg);
+    }
+    
+    .footer__content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .warning-box__header {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .warning-icon {
+        font-size: var(--font-size-xl);
+    }
+    
+    .card__status-badge {
+        top: var(--space-sm);
+        right: var(--space-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --container-padding: 1.5rem;
+        --font-size-base: 1.4rem;
+        --font-size-lg: 1.6rem;
+        --font-size-xl: 1.8rem;
+        --font-size-2xl: 2rem;
+        --font-size-3xl: 2.4rem;
+    }
+    
+    body {
+        font-size: 1.4rem;
+    }
+    
+    .logo {
+        max-width: 150px;
+    }
+    
+    .header__subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .disclaimer {
+        padding: var(--space-md);
+    }
+    
+    .disclaimer__badge {
+        font-size: var(--font-size-xs);
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .card__content {
+        flex-direction: column;
+        padding: var(--space-md);
+    }
+    
+    .card__date {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        padding: var(--space-md);
+        justify-content: space-between;
+    }
+    
+    .card__day {
+        font-size: var(--font-size-xl);
+    }
+    
+    .card__month {
+        margin-top: 0;
+        margin-left: var(--space-sm);
+    }
+    
+    .card__meta {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .schedule__card:hover {
+        transform: translateY(-4px);
+    }
+    
+    a:hover {
+        color: var(--color-primary);
+        transition: color var(--transition-fast);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-bg: #000000;
+        --color-text: #ffffff;
+    }
+}
+
+@media (min-width: 1200px) {
+    .schedule__card {
+        max-width: 100%;
+    }
+    
+    .card__content {
+        padding: var(--space-lg) var(--space-2xl);
+    }
+    
+    .card__header {
+        min-width: 180px;
+    }
+    
+    .schedule__grid {
+        gap: var(--space-2xl);
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    :root {
+        --container-max: 140rem;
+        --font-size-base: 1.8rem;
+        --font-size-lg: 2rem;
+        --font-size-xl: 2.6rem;
+        --font-size-2xl: 3.6rem;
+        --font-size-3xl: 5.4rem;
+        --font-size-4xl: 7.2rem;
+    }
+}
